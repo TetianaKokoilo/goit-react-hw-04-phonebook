@@ -7,9 +7,33 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background: radial-gradient(
+    100% 132.88% at 0% 3.17%,
+    rgba(0, 150, 255, 0.32) 0%,
+    rgba(255, 222, 106, 0.26) 100%
+  );
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+  margin-bottom: 30px;
+
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
