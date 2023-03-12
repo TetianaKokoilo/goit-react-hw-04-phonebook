@@ -3,7 +3,7 @@ import { ContactForm } from './ContactForm/ContactForm';
 import { ContactList } from './ContactList/ContactList';
 import { Filter } from './Filter/Filter';
 import { nanoid } from 'nanoid';
-import dataContacts from '../contactsdata.json';
+// import dataContacts from '../contactsdata.json';
 import {
   StyledTitle,
   StyledContainer,
