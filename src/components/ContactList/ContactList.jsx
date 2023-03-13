@@ -1,4 +1,4 @@
-// import PropTypes from 'prop-types';
+import PropTypes from 'prop-types';
 import { StyledText, StyledList, StyledItems, StyledContactButton } from './ContactList.styled'
 
 export const ContactList = ({ contacts, onDelete }) => {
@@ -17,12 +17,10 @@ export const ContactList = ({ contacts, onDelete }) => {
   );
 };
 
-// ContactList.propTypes = {
-//   contacts: PropTypes.arrayOf(
-//     PropTypes.shape({
-//       id: PropTypes.string,
-//       name: PropTypes.string,
-//       number: PropTypes.string,
-//     })
-//   ),
-// };
+ContactList.propTypes = {
+  contacts: PropTypes.func,
+  id: PropTypes.string,
+  name: PropTypes.string,
+  number: PropTypes.string,
+
+}
