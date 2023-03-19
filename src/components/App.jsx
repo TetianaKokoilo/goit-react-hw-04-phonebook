@@ -10,15 +10,18 @@ import {
   StyledContactsTitle,
 } from './App.styled';
 
-export const App = () => {
-  const useLocalStorage = (key, defaultValue = dataContacts) => {
+export function App() {
+  const getDataLocalStorage = (
+    key = 'contacts',
+    defaultValue = dataContacts
+  ) => {
     return JSON.parse(window.localStorage.getItem(key)) ?? defaultValue;
   };
-  const [contacts, setContacts] = useState(useLocalStorage());
+  const [contacts, setContacts] = useState(getDataLocalStorage());
   const [filter, setFilter] = useState('');
 
   useEffect(() => {
-    window.localStorage.setItem('contscts', JSON.stringify(contacts));
+    window.localStorage.setItem('contacts', JSON.stringify(contacts));
   }, [contacts]);
 
   const addContactformSubmit = ({ name, number }) => {
@@ -61,4 +64,4 @@ export const App = () => {
       <ContactList contacts={getFilterName} onDelete={deleteContact} />
     </StyledContainer>
   );
-};
+}
